@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf55e5f323d635a4d9b4bc1e3c09091e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 5
+  radius: 10
   mask: {fileID: 0}
 --- !u!50 &6789323333160930205
 Rigidbody2D:

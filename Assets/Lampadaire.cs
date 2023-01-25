@@ -24,7 +24,7 @@ public class Lampadaire : MonoBehaviour
     void Update()
     {
         if (isOn && mask.transform.localScale.x < radius) {
-            mask.transform.localScale = Vector3.Lerp(mask.transform.localScale, new Vector3(radius, radius, 1f), Time.deltaTime * 2f);
+            mask.transform.localScale = Vector3.Lerp(mask.transform.localScale, new Vector3(radius, radius, 1f), Time.deltaTime);
             //mask.transform.localScale = new Vector3(radius, radius, 1f);
         }
     }
