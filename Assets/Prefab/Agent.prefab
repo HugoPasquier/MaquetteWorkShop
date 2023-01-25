@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7080494182278326663}
   - component: {fileID: -983384582429476139}
   - component: {fileID: 2274430936762908702}
+  - component: {fileID: -8333886946916662976}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Untagged
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122963ac8ca64254fac8b07024ded664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 1
 --- !u!50 &-983384582429476139
 Rigidbody2D:
   serializedVersion: 4
@@ -138,6 +139,14 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!81 &-8333886946916662976
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7080494182278326682}
+  m_Enabled: 1
 --- !u!1001 &147209036007211285
 PrefabInstance:
   m_ObjectHideFlags: 0
