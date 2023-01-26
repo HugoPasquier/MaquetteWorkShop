@@ -14,16 +14,20 @@ public class AgentMovement : MonoBehaviour
 
     private float epsilon = 0.1f;
     private bool stop = false;
-    private bool start = false;
+    [SerializeField] private bool start = false;
     private SpriteMask mask = null;
     private bool end = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        //transform.position = points[0].position;
+        transform.position = points[0].position;
     }
 
+    void GoAgain() {
+        stop = false;
+    }
+    
     public void End() {
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         mask = gameObject.GetComponentInChildren<SpriteMask>();
@@ -40,28 +44,32 @@ public class AgentMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Inputs();
+        //Inputs();
 
         if (end) {
             mask.transform.localScale = Vector3.Lerp(mask.transform.localScale, new Vector3(finalRadius, finalRadius, 1f), Time.deltaTime * 0.05f);
         }
 
-        //if (start) {
+        if (start) {
 
-        //    if (pointsIndex <= points.Length - 1) {
-        //        transform.position = Vector3.MoveTowards(transform.position, points[pointsIndex].position, speed * Time.deltaTime);
-        //        transform.up = Vector3.RotateTowards(transform.up, points[pointsIndex].position - transform.position, speed * Time.deltaTime, 0.0f);
+            if (pointsIndex <= points.Length - 1) {
+                transform.position = Vector3.MoveTowards(transform.position, points[pointsIndex].position, speed * Time.deltaTime);
+                transform.up = Vector3.RotateTowards(transform.up, points[pointsIndex].position - transform.position, speed * Time.deltaTime * 3.0f, 0.0f);
 
-        //        if (Vector3.Distance(transform.position, points[pointsIndex].transform.position) < epsilon && !stop) {
-        //            Debug.Log("next point");
-        //            pointsIndex++;
-        //        }
-        //    }
+                if (Vector3.Distance(transform.position, points[pointsIndex].transform.position) < epsilon && !stop) {
+                    Debug.Log("next point");
+                    pointsIndex++;
+                }
+            }
 
-        //    if (points[pointsIndex].position == waitingPoint.position) {
-        //        stop = true;
-        //    }
-        //}
+            if (points[pointsIndex].position == waitingPoint.position) {
+                stop = true;
+            }
+
+            if (stop) {
+                Invoke("GoAgain", 4f);
+            }
+        }
 
     }
 
