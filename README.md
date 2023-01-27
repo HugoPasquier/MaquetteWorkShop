@@ -1,4 +1,4 @@
-# Atelier à quoi réve les maquette - Immersion Temporelle
+# Atelier à quoi rêvent les maquettes - Immersion Temporelle
 
 ## Description 
 Le dispositif présenté vise à mettre en avant l'apaisement qui interviendra au niveau de l'ambiance sonore du nouveau quartier Gratte Ciel une fois les travaux finalisés à l'horizon 2030. Pour cela, nous vous proposons dans un premier temps, de parcourir un trajet de nos jour en écoutant les différents sons que l'on peut entendre dans le quartier. Et dans un deuxième temps d'effectuer le parcours inverse en imaginant l'ambiance sonore une fois les travaux finis.
